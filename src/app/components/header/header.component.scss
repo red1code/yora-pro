@@ -1,0 +1,86 @@
+@import '../../scss/variables';
+
+header {
+  height: 65px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: calc($gap / 2) $gap;
+  background-color: rgba($primary-color, 0.9);
+  box-shadow: 0 0 3px 0 $bg-dark;
+  -webkit-box-shadow: 0 0 3px 0 $bg-dark;
+  -moz-box-shadow: 0 0 3px 0 $bg-dark;
+  z-index: 100;
+
+  .inside-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      max-width: 100px;
+      height: max-content;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    nav {
+      ul {
+        display: flex;
+        gap: $gap;
+
+        li {
+          font-weight: 500;
+        }
+
+        li:hover {
+          color: $accent-color ;
+        }
+      }
+    }
+
+    button {
+      padding: 0;
+      display: none;
+    }
+  }
+}
+
+#mobileMenu {
+  position: fixed;
+  top: 65px;
+  width: 100%;
+  padding: $gap;
+  background-color: rgba($bg-light, 0.9);
+  box-shadow: 0 0 1px 0 $bg-dark;
+  z-index: 90;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+    font-weight: 500;
+    color: $txt-dark;
+
+    li:hover {
+      color: $accent-color;
+      transition: 0.3s;
+    }
+  }
+}
+
+/*
+** responsive styles
+*/
+
+@media screen and (max-width: 600px) {
+  #desktopMenu {
+    display: none;
+  }
+
+  #toggleMenuBtn {
+    display: block;
+  }
+}

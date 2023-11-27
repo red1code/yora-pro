@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 300px;
+  min-height: 100dvh;
+  color: $txt-dark;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+button {
+  outline: none;
+  background: transparent;
+  border: none;
+  color: inherit;
+  font-weight: 600;
+  padding: calc($gap / 2) calc($gap);
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(0.9);
+}

@@ -1,0 +1,31 @@
+<header>
+  <div class="inside-container">
+    <div class="logo">
+      <a routerLink="/">
+        <img src="../../../assets/logo-placeholder.svg" width="100%" alt="Yora Pro logo">
+      </a>
+    </div>
+    <nav id="desktopMenu">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button type="button" id="toggleMenuBtn" (click)="showMobileMenu=!showMobileMenu">
+      <img [src]="toggleMobileMenuImg()" width="20" 
+          id="toggleMenu" alt="Mobile menu toggle icon">
+    </button>
+  </div>
+</header>
+
+<nav id="mobileMenu" class="hide-mobile-menu" [ngClass]="{
+  'show-mobile-menu': this.showMobileMenu, 
+  'hide-mobile-menu': !this.showMobileMenu 
+  }">
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
