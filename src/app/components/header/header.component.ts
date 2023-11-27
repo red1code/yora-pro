@@ -14,6 +14,6 @@ export class HeaderComponent {
   showMobileMenu = false;
 
   toggleMobileMenuImg = () => this.showMobileMenu
-    ? '../../../assets/close-menu.svg'
-    : '../../../assets/align-justify.svg';
+    ? './assets/close-menu.svg'
+    : './assets/align-justify.svg';
 }
